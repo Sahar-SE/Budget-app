@@ -9,7 +9,7 @@ RSpec.describe 'Groups', type: :request do
     end
 
     it 'renders correct template' do
-    #   expect(response).to render_template(:index)
+      #   expect(response).to render_template(:index)
     end
 
     it 'returns correct response body' do
