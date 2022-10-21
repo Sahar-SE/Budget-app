@@ -1,15 +1,19 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the UsersHelper. For example:
-#
-# describe UsersHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
-RSpec.describe UsersHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe 'Users', type: :request do
+  describe 'GET /index' do
+    before(:example) { get '/users' }
+
+    it 'returns correct response status' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'renders correct template' do
+      # expect(response).to render_template(:index)
+    end
+
+    it 'returns correct response body' do
+      expect(response.body).to include('Users List')
+    end
+  end
 end
