@@ -1,0 +1,22 @@
+<div class="d-flex flex-column align-items-center">
+<%= render "budgets/new" %>
+</div>
+<div class="container d-flex flex-column justify-content-center align-items-center">
+
+  <%= form_with model: @budgets, url: group_budgets_path, method: :post, data: { turbo: false } do |f| %>
+    <div class="form-group p-2">
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" , class: "form-control", placeholder: "Budget Name" %>
+    </div>
+    <div class="form-group p-2">
+      <%= f.text_field :amount, autofocus: true, autocomplete: "name" , class: "form-control", placeholder: "Amount in numbers" %>
+    </div>
+
+    <div class="form-group p-2">
+      <%= f.submit "SAVE" , class: "form-control btn btn-success" %>
+    </div>
+  <% end %>
+   <a href="/groups">
+        <span class="material-symbols-outlined">
+          back
+          </span>
+  </a>
