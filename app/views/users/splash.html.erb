@@ -1,0 +1,11 @@
+<div class="splash d-flex flex-column align-items-center">
+  <div class="spinner-grow bg-primary p-3 m-5" style="width: 1.5rem; height: 1.5rem;" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <h1>BudgetOnRails</h1>
+  <div class="log d-flex flex-column align-items-center col-11">
+  <% unless user_signed_in? %>
+    <%= link_to "SIGN UP", new_user_registration_path, :class => 'btn col-11 mt-5 mb-2 btn btn-primary' %>
+    <%= link_to "LOG IN", new_user_session_path, :class => 'col-11 btn btn-success' %>
+  <% end %>
+</div>
