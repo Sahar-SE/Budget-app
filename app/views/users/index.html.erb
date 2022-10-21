@@ -1,1 +1,9 @@
+<div class="container d-flex flex-column justify-content-center align-items-center">
 <h1>Users List</h1>
+
+<% @users.each do |user| %>
+    <%= render partial: 'user_card', locals: { user: user } %>
+  <% end %>
+  <%= link_to "Back", root_path %>
+
+</div>
