@@ -27,6 +27,7 @@ This is an educational project is about building a mobile web application where 
  - Analyze in writing why you have made a coding choice using one structure over another.
 # Project Documentation 📄
  Here is the presentation video link👈
+ https://drive.google.com/file/d/1VvoRzbA8VvHDA4HTo09LZ8Qdrii4QjK8/view?usp=sharing
 
 # Built With 🛠️
 - Programming Language: Ruby
@@ -35,6 +36,11 @@ This is an educational project is about building a mobile web application where 
 - Code Editor: VS Code
 ## Getting Started
 To get a local copy up and running follow these simple steps.
+- $ git clone yourrepo.git
+- $ cd yourrepo
+- $ bundle
+- $ rails db:setup
+- $ rails s
 
 # Prerequisites
  A web browser like Google Chrome.
