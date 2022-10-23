@@ -1,0 +1,17 @@
+<div class="card text-center mb-3" style="width: 18rem;">
+  <% if user == current_user %>
+  <div class="card-header mb-0 pb-0 bg-success text-light">
+    <p>Current User</p>
+  </div>
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%= user.name %></h5>
+    <p class="card-text"><%= user.email %></p>
+      <% if user == current_user %>
+      <%= link_to 'Edit', edit_user_registration_path, :class => 'btn btn-primary' %>
+      <% end %>
+    </div>
+    <div class="card-footer text-muted">
+      Created <%= time_ago_in_words(user.created_at) %>
+  </div>
+</div>

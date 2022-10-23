@@ -11,8 +11,15 @@
   </head>
 
   <body>
-   <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+    <% if user_signed_in? && controller_name != 'registrations' %>
+      <%= render "layouts/navbar" %>
+    <% end %>
+    <% if notice %>
+      <%= render 'layouts/notice' %>
+    <% end %>
+    <% if alert %>
+      <%= render 'layouts/alert' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

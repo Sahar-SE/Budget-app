@@ -1,0 +1,21 @@
+<div class="col-6 d-flex flex-row card justify-content-center align-items-center m-3 pt-3">
+  <div class="p-2 col-4 d-flex flex-column justify-content-center align-items-center">
+    <% if group.icon %>
+    <span class="material-symbols-outlined img">
+      <h5><%= group.icon %></h5>
+      </span>
+  <% end %>
+    <h5 class="card-title badge text-bg-warning p-2 px-4"><%= group.name %></h5>
+  </div>
+
+
+  <div class="p-2 col-4 card-body d-flex flex-column justify-content-center align-items-center">
+    <p class="card-text pt-2">Total Amount Allotted: $
+      <%= group.budgets.sum(:amount) %>
+    </p>
+     <p class="card-text opacity-50"><%= time_ago_in_words(group[:created_at]) %></p>
+  </div>
+    <div class="col-2">
+    <%= button_to "SELECT", group_path(group), method: :get, class: "btn btn-success" %>
+  </div>
+</div>
