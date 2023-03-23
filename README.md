@@ -36,7 +36,7 @@ This is an educational project is about building a mobile web application where 
 - Code Editor: VS Code
 ## Getting Started
 To get a local copy up and running follow these simple steps.
-- $ git clone yourrepo.git
+- $ git clone the repo url
 - $ cd yourrepo
 - $ bundle
 - $ rails db:setup
@@ -60,7 +60,7 @@ Clone the repository using the GitHub link provided below.
 ## Install
 In the terminal, go to your file directory and run this command.
 
-## $ git clone git@github.com:mavericks-db/BudgetOnRails.git
+## $ git clone repo url
 Usage
 Kindly modify the files as needed.
 
